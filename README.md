@@ -1,10 +1,9 @@
 # syntaxTrees
 
 
-This library allows you to define schemas for parsing JSON objects. It is similar to [json-schema](https://json-schema.org/) but has some additional features:
+This library allows you to define schemas for parsing JSON objects. It is similar to [json-schema](https://json-schema.org/). However, schemas are defined as classes instead of JSON objects and have some additional features:
 
-* Define schemas through classes.
-* It is possible to make objects depend on each other, to automatically fill in missing fields with defaults, and even to programmatically generate fields based on context. Since it's class-based, it is easy to write extensions simply by overwriting the validate() method.
+* You can make objects depend on each other, automatically fill in missing fields with defaults, and even programmatically generate fields based on context. Since it's class-based, it is easy to write extensions simply by overwriting the validate() method.
 * The error messages are very understandable, and they even make context-dependent suggestions for fixing errors.
 * You can define arbitrary methods to operate on parsed JSON objects that match the schema. In the example nodesExample.py, this is demonstrated on math functions, but you can also implement much more complex functions. In my startup [elody.com](https://elody.com), this was used to implement the entire control logic of an AI and to decide under which circumstances which software is appropriate to use.
 * Automatically generate documentation that describes exactly how the syntax tree elements are connected. This documentation is generated as HTML, and contains links to make it very easy to navigate. See here for an example: <https://elody.com/tutorial/documentation_objects/>
