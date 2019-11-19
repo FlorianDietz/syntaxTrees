@@ -17,6 +17,17 @@ You can define the syntactical logic through classes like this:
 
 ```python
 class MyExampleNode(syntaxTreesBasics.Node):
+    field_1 = fields.Float()
+    field_2 = fields.String()
+    field_3 = fields.Value('my_example_node', null=True, default=None)
+    class Meta:
+        name = 'my_example_node'
+```
+
+or with more details, like this:
+
+```python
+class MyExampleNode(syntaxTreesBasics.Node):
     field_1 = fields.Float(default=0, min=-1000, max=1000, help="Comments like this one will appear in the automatically generated HTML documentation.")
     field_2 = fields.String()
     field_3 = fields.Value('my_example_node', null=True, default=None, help="This field is recursive and defines another Node of the same type as this one.")
