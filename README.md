@@ -16,7 +16,7 @@ You can define the syntactical logic through classes like this:
 
 ```python
 class MyExampleNode(syntaxTreesBasics.Node):
-    field_1 = fields.Float()
+    field_1 = fields.Float(default=0)
     field_2 = fields.String()
     field_3 = fields.Value('my_example_node', null=True, default=None)
     class Meta:
