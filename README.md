@@ -1,13 +1,6 @@
 # syntaxTrees
 
 
-
--check the below notes, make them better
--add links to elody.com
--make sure the examples look proper
--upload to git
--upload to pip
-
 This library allows you to define schemas for parsing JSON objects. It is similar to [json-schema](https://json-schema.org/) but has some additional features:
 
 * Define schemas through classes.
